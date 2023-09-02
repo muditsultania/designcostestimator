@@ -1,0 +1,39 @@
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+
+        .attribute-list {
+            margin-top: 20px;
+        }
+
+        .attribute-list label {
+            display: flex;
+            align-items: center;
+        }
+
+        .attribute-list input[type="number"] {
+            margin-left: 10px;
+        }
+        
