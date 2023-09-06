@@ -488,27 +488,9 @@ function calculateEstimate() {
 
     // Display the total units and total cost
     if (!isNaN(totalUnits) && !isNaN(totalCost)) {
-        resultElement.textContent = ` Total Cost: ${totalCost}`;
+        resultElement.textContent = `Total Units Used: ${totalUnits}, Total Cost: ${totalCost}, Signing Amount: ${signingAmount}, Layout Finalization Amount: ${layoutFinalizationAmount}, 3D Finalization Cost: ${finalization3DCost}`;
     } else {
         resultElement.textContent = "Invalid input. Please enter numeric values.";
     }
-
-    // Inside the "calculateEstimate" function
-    const selectedItems = {}; // Initialize an empty object
-
-    for (const type in inputFields) {
-        const inputValue = inputFields[type].value;
-        const quantity = parseFloat(inputValue) || 0;
-        selectedItems[type] = quantity; // Store the item name as the key and quantity as the value
-    }
-    
-    // Encode the selected items as a JSON string
-    const selectedItemsParam = encodeURIComponent(JSON.stringify(selectedItems));
-    const resultUrl = `result.html?selectedItems=${selectedItemsParam}&totalUnits=${totalUnits}&totalCost=${totalCost}&signingAmount=${signingAmount}&layoutFinalizationAmount=${layoutFinalizationAmount}&finalization3DCost=${finalization3DCost}`;
-    
-    // Open "result.html" in a new tab
-    window.open(resultUrl, '_blank');
-
-        
-    
-}})
+}
+})
